@@ -52,7 +52,8 @@ elif opt.start_from  == "video":
         video_utils.save_tensor(
             t,
             frame_dir + "/frame-%s.jpg" % str(frame_index).zfill(5),
-            text="original video",
+            text="pathetic original",
+            text_color=(0,0,0),
         )
         frame_index += 1
 else:
@@ -92,6 +93,8 @@ for i in tqdm(range(opt.how_many)):
     video_utils.save_tensor(
         next_frame, 
         frame_dir + "/frame-%s.jpg" % str(frame_index).zfill(5),
+        text="masterpiece copy",
+        text_color=(0,0,0),
     )
     current_frame = next_frame
     frame_index+=1
